@@ -26,7 +26,7 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="#!">Start Bootstrap</a>
+        <a class="navbar-brand" href="#!">www.Find-Them.com</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -43,22 +43,24 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#!">Home</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="index">Index</a></li>
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
                 id="navbarDropdown"
+                href="{% static anyone.jpg %}"
+                rel="stylesheet"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-                >Shop</a
+                >Learn More</a
               >
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#!">All Products</a></li>
+                <li><a class="dropdown-item" href="#!">Their Stories</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                <li><a class="dropdown-item" href="#!">Information On Trafficking</a></li>
+                <li><a class="dropdown-item" href="#!">How We Can Help</a></li>
               </ul>
             </li>
           </ul>
@@ -78,7 +80,7 @@
         <div class="text-center text-white">
           <h1 class="display-4 fw-bolder">Human Trafficking</h1>
           <p class="lead fw-normal text-white-50 mb-0">
-            Learn More About The Human Trafficking Issue
+            "What was lost is now found."
           </p>
         </div>
       </div>
@@ -92,22 +94,27 @@
           <div class="col mb-5">
             <div class="card h-100">
               <!-- Product image-->
-              <img class="card-img-top" src="{% static "img/anyone.jpg" %}"
+              <img class="card-img-top" src="{% static 'img/anyone.jpg' %}"
               alt="cute little infographic" />
               <!-- Product details-->
               <div class="card-body p-4">
                 <div class="text-center">
                   <!-- Person name-->
                   <h5 class="fw-bolder">Halima Sharmarice</h5>
-                  <!-- Date Missing -->
-                  10/30/2009
-                </div>
+                 <!-- Date Missing -->
+                 Date Missing: 10/30/2009
+                <div class="d-flex justify-content-center small text-warning mb-2"
+               >
               </div>
+               <!-- Product price-->
+               Age Missing: 14
+             </div>
+            </div>
               <!-- Product actions-->
               <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                 <div class="text-center">
                   <a class="btn btn-outline-dark mt-auto" href="#"
-                    >View options</a
+                    >More Information</a
                   >
                 </div>
               </div>
@@ -115,12 +122,12 @@
           </div>
           <div class="col mb-5">
             <div class="card h-100">
-              <!-- Sale badge-->
+              <!-- Found badge-->
               <div
                 class="badge bg-dark text-white position-absolute"
                 style="top: 0.5rem; right: 0.5rem"
               >
-                Sale
+                Found
               </div>
               <!-- Product image-->
               <img
@@ -133,28 +140,20 @@
                 <div class="text-center">
                   <!-- Product name-->
                   <h5 class="fw-bolder">Kimberly Martinez</h5>
-                  <!-- Product reviews-->
-                  <div
-                    class="d-flex justify-content-center small text-warning mb-2"
+                   <!-- Date Missing -->
+                   Date Missing: 10/16/015
+                    <div class="d-flex justify-content-center small text-warning mb-2"
                   >
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
                   </div>
                   <!-- Product price-->
-                  <span class="text-muted text-decoration-line-through"
-                    >$20.00</span
-                  >
-                  $18.00
+                  Age Missing: 14
                 </div>
               </div>
               <!-- Product actions-->
               <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                 <div class="text-center">
                   <a class="btn btn-outline-dark mt-auto" href="#"
-                    >Add to cart</a
+                    >More Information</a
                   >
                 </div>
               </div>
@@ -162,36 +161,40 @@
           </div>
           <div class="col mb-5">
             <div class="card h-100">
-              <!-- Sale badge-->
+              <!-- Found badge-->
               <div
                 class="badge bg-dark text-white position-absolute"
                 style="top: 0.5rem; right: 0.5rem"
               >
-                Sale
+                Found
               </div>
               <!-- Product image-->
               <img
                 class="card-img-top"
-                src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                src="https://www.un.org/sites/un2.un.org/files/styles/large-article-image-style-16-9/public/field/image/un0381303.jpg?itok=SaL3L4vb"
                 alt="..."
               />
               <!-- Product details-->
               <div class="card-body p-4">
                 <div class="text-center">
                   <!-- Product name-->
-                  <h5 class="fw-bolder">Brenda Gomaz</h5>
+                  <h5 class="fw-bolder">Found On 12/05/2020</h5>
+                  <h5 class="fw-bolder">Brenda Gomez</h5>
+                   <!-- Date Missing -->
+                   Date Missing: 07/23/2004
+                   <div class="d-flex justify-content-center small text-warning mb-2"
+                   >
+                   </div>
                   <!-- Product price-->
-                  <span class="text-muted text-decoration-line-through"
-                    >$50.00</span
-                  >
-                  $25.00
+                  Age Missing: 16
+                  <span class="text-muted text-decoration-line-through"></span>
                 </div>
               </div>
               <!-- Product actions-->
               <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                 <div class="text-center">
                   <a class="btn btn-outline-dark mt-auto" href="#"
-                    >Add to cart</a
+                    >More Information</a
                   >
                 </div>
               </div>
@@ -210,25 +213,22 @@
                 <div class="text-center">
                   <!-- Product name-->
                   <h5 class="fw-bolder">Acacia Bishop</h5>
+                   <!-- Date Missing -->
+                   Date Missing: 05/25/2003
                   <!-- Product reviews-->
                   <div
                     class="d-flex justify-content-center small text-warning mb-2"
                   >
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
                   </div>
                   <!-- Product price-->
-                  $40.00
+                  Age Missing: 1
                 </div>
               </div>
               <!-- Product actions-->
               <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                 <div class="text-center">
                   <a class="btn btn-outline-dark mt-auto" href="#"
-                    >Add to cart</a
+                    >More Information</a
                   >
                 </div>
               </div>
@@ -236,12 +236,12 @@
           </div>
           <div class="col mb-5">
             <div class="card h-100">
-              <!-- Sale badge-->
+              <!-- Found badge-->
               <div
                 class="badge bg-dark text-white position-absolute"
                 style="top: 0.5rem; right: 0.5rem"
               >
-                Sale
+                Found
               </div>
               <!-- Product image-->
               <img
@@ -253,19 +253,19 @@
               <div class="card-body p-4">
                 <div class="text-center">
                   <!-- Product name-->
+                  <h5 class="fw-bolder">Found Item</h5>
                   <h5 class="fw-bolder">Maria Salazar</h5>
+                   <!-- Date Missing -->
+                   Date Missing: 08/03/2020
                   <!-- Product price-->
-                  <span class="text-muted text-decoration-line-through"
-                    >$50.00</span
-                  >
-                  $25.00
+                  Age Missing: 14
                 </div>
               </div>
               <!-- Product actions-->
               <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                 <div class="text-center">
                   <a class="btn btn-outline-dark mt-auto" href="#"
-                    >Add to cart</a
+                    >More Information</a
                   >
                 </div>
               </div>
@@ -284,15 +284,17 @@
                 <div class="text-center">
                   <!-- Product name-->
                   <h5 class="fw-bolder">Peggy Hernandez-Soto</h5>
+                   <!-- Date Missing -->
+                   Date Missing: 04/09/2020
                   <!-- Product price-->
-                  $120.00 - $280.00
+                  Age Missing: 6
                 </div>
               </div>
               <!-- Product actions-->
               <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                 <div class="text-center">
                   <a class="btn btn-outline-dark mt-auto" href="#"
-                    >View options</a
+                    >More Information</a
                   >
                 </div>
               </div>
@@ -300,12 +302,12 @@
           </div>
           <div class="col mb-5">
             <div class="card h-100">
-              <!-- Sale badge-->
+              <!-- Found badge-->
               <div
                 class="badge bg-dark text-white position-absolute"
                 style="top: 0.5rem; right: 0.5rem"
               >
-                Sale
+                Found
               </div>
               <!-- Product image-->
               <img
@@ -318,28 +320,22 @@
                 <div class="text-center">
                   <!-- Product name-->
                   <h5 class="fw-bolder">Lucero Jimenez</h5>
+                   <!-- Date Missing -->
+                   Date Missing: 06/24/2021
                   <!-- Product reviews-->
                   <div
                     class="d-flex justify-content-center small text-warning mb-2"
                   >
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
                   </div>
                   <!-- Product price-->
-                  <span class="text-muted text-decoration-line-through"
-                    >$20.00</span
-                  >
-                  $18.00
+                  Age Missing: 14
                 </div>
               </div>
               <!-- Product actions-->
               <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                 <div class="text-center">
                   <a class="btn btn-outline-dark mt-auto" href="#"
-                    >Add to cart</a
+                    >More Information</a
                   >
                 </div>
               </div>
@@ -358,38 +354,130 @@
                 <div class="text-center">
                   <!-- Product name-->
                   <h5 class="fw-bolder">Yuris Colindres-Avila</h5>
+                   <!-- Date Missing -->
+                   Date Missing: 11/08/2013
                   <!-- Product reviews-->
                   <div
                     class="d-flex justify-content-center small text-warning mb-2"
                   >
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
                   </div>
                   <!-- Product price-->
-                  $40.00
+                  Age Missing: 17
                 </div>
               </div>
               <!-- Product actions-->
               <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                 <div class="text-center">
                   <a class="btn btn-outline-dark mt-auto" href="#"
-                    >Add to cart</a
+                    >More Information</a
                   >
                 </div>
               </div>
             </div>
           </div>
+<div class="col mb-5">
+<div class="card h-100">
+  <!-- Product image-->
+  <img
+    class="card-img-top"
+    src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+    alt="..."
+  />
+  <!-- Product details-->
+  <div class="card-body p-4">
+    <div class="text-center">
+      <!-- Product name-->
+      <h5 class="fw-bolder">Kandis Harris</h5>
+       <!-- Date Missing -->
+       Date Missing: 07/15/2021
+      <!-- Product reviews-->
+      <div
+        class="d-flex justify-content-center small text-warning mb-2"
+      >
+      </div>
+      <!-- Product price-->
+      Age Missing: 16
+    </div>
+  </div>
+  <!-- Product actions-->
+  <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+    <div class="text-center">
+      <a class="btn btn-outline-dark mt-auto" href="#"
+        >More Information</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col mb-5">
+  <div class="card h-100">
+    <!-- Product image-->
+    <img
+      class="card-img-top"
+      src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+      alt="..."
+    />
+    <!-- Product details-->
+    <div class="card-body p-4">
+      <div class="text-center">
+        <!-- Product name-->
+        <h5 class="fw-bolder">Jayden Seal</h5>
+         <!-- Date Missing -->
+         Date Missing: 07/30/2006
+        <!-- Product reviews-->
+        <div
+          class="d-flex justify-content-center small text-warning mb-2"
+        >
+        </div>
+        <!-- Product price-->
+        Age Missing: 1
+      </div>
+    </div>
+    <!-- Product actions-->
+    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+      <div class="text-center">
+        <a class="btn btn-outline-dark mt-auto" href="#"
+          >More Information</a
+          >
         </div>
       </div>
+    </div>
+  </div>
+  <div class="col mb-5">
+    <div class="card h-100">
+      <!-- Product image-->
+      <img
+        class="card-img-top"
+        src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+        alt="..."
+      />
+      <!-- Product details-->
+      <div class="card-body p-4">
+        <div class="text-center">
+          <!-- Product name-->
+          <h5 class="fw-bolder">Jose Lizarraga</h5>
+           <!-- Date Missing -->
+           Date Missing: 06/13/2018
+          <!-- Product reviews-->
+          <div
+            class="d-flex justify-content-center small text-warning mb-2"
+          >
+          </div>
+          <!-- Product price-->
+          Age Missing: 13
+        </div>
+      </div>
+      <!-- Product actions-->
+      <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+        <div class="text-center">
+          <a class="btn btn-outline-dark mt-auto" href="#"
+            >More Information</a
     </section>
     <!-- Footer-->
     <footer class="py-5 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">
-          Copyright &copy; Your Website 2022
+          Copyright &copy; Group Seven 2022
         </p>
       </div>
     </footer>
