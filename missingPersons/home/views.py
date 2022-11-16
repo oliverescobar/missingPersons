@@ -5,4 +5,4 @@ def indexPageView(request):
     return render(request, 'homepages/index.html')
 
 def HomePageView(request):
-    return render(request, 'homepages/indexbootstrap.html')
+    return render(request, 'homepages/homepage.html')
