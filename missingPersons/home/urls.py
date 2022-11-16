@@ -1,10 +1,8 @@
 from django.urls import path
-#from .views import indexPageViews
-from .views import indexbootstrapPageView
-from .views import firstPageView
+from .views import HomePageView, indexPageView
 
 
 urlpatterns = [
-    path("", indexbootstrapPageView, name="index"),
-    path("first/", firstPageView, name="first"),
+    path("", HomePageView, name="home"),
+    path("index/", indexPageView, name="index"),
 ]
