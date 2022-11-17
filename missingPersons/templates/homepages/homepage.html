@@ -27,7 +27,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="#!">www.Bring-Them-Home.org</a>
-        <button
+        {% comment %} <button
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -35,10 +35,10 @@
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+        > {% endcomment %}
+          {% comment %} <span class="navbar-toggler-icon"></span> {% endcomment %}
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        {% comment %} <div class="collapse navbar-collapse" id="navbarSupportedContent"> {% endcomment %}
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
             
             {% comment %} <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
@@ -68,7 +68,7 @@
               <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
             </button>
           </form> 
-        </div>
+        {% comment %} </div> {% endcomment %}
       </div>
     </nav>
     <!-- Header-->
