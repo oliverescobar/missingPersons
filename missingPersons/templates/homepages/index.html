@@ -2,184 +2,265 @@
 <!-- Oliver Escobar, Tayler Howard, Ashley Ondua, Karl Nordgren, Zack Olsen, Thayne Evans -->
 
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
-<head>  
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Human Trafficking</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <!-- <link href="css/styles.css" rel="stylesheet" />-->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="http://127.0.0.1:8000/">www.Bring-Them-Home.org</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+            
+            {% comment %} <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                id="navbarDropdown"
+                href="{% static anyone.jpg %}"
+                rel="stylesheet"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Learn More</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#!">All Products</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#!">Popular Items</a></li>
+                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+              </ul>
+            </li> {% endcomment %}
+          </ul>
+          <form class="d-flex">
+            <button class="btn btn-outline-dark" type="submit">
+              <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/">Return To Homepage</a>
+              <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+            </button>
+          </form> 
+        </div>
+      </div>
+    </nav>
+  <body>
     <table class="table table-bordered table-hover table-condensed">
-        <thead><tr><th title="Field #1">date_missing</th>
-        <th title="Field #2">last_name</th>
-        <th title="Field #3">first_name</th>
-        <th title="Field #4">age_at_missing</th>
-        <th title="Field #5">city</th>
-        <th title="Field #6">state</th>
-        <th title="Field #7">gender</th>
-        <th title="Field #8">race</th>
-        </tr></thead>
-        <tbody><tr>
-        <td>10/30/2009</td>
-        <td>Sharmarice</td>
-        <td>Halima</td>
-        <td align="right">14</td>
-        <td>Granger</td>
-        <td>UT</td>
-        <td>F</td>
-        <td>W</td>
+      <thead>
+        <tr>
+          <th title="Field #1">date_missing</th>
+          <th title="Field #2">last_name</th>
+          <th title="Field #3">first_name</th>
+          <th title="Field #4">age_at_missing</th>
+          <th title="Field #5">city</th>
+          <th title="Field #6">state</th>
+          <th title="Field #7">gender</th>
+          <th title="Field #8">race</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10/30/2009</td>
+          <td>Sharmarice</td>
+          <td>Halima</td>
+          <td align="right">14</td>
+          <td>Granger</td>
+          <td>UT</td>
+          <td>F</td>
+          <td>W</td>
         </tr>
         <tr>
-        <td>10/16/2015</td>
-        <td>Martinez</td>
-        <td>Kimberly</td>
-        <td align="right">16</td>
-        <td>West Valley City</td>
-        <td>UT</td>
-        <td>F</td>
-        <td>M</td>
+          <td>10/16/2015</td>
+          <td>Martinez</td>
+          <td>Kimberly</td>
+          <td align="right">16</td>
+          <td>West Valley City</td>
+          <td>UT</td>
+          <td>F</td>
+          <td>M</td>
         </tr>
         <tr>
-        <td>07/23/2004</td>
-        <td>Gomez</td>
-        <td>Brenda</td>
-        <td align="right">3</td>
-        <td>Logan</td>
-        <td>UT</td>
-        <td>F</td>
-        <td>H</td>
+          <td>07/23/2004</td>
+          <td>Gomez</td>
+          <td>Brenda</td>
+          <td align="right">3</td>
+          <td>Logan</td>
+          <td>UT</td>
+          <td>F</td>
+          <td>H</td>
         </tr>
         <tr>
-        <td>05/25/2003</td>
-        <td>Bishop</td>
-        <td>Acacia</td>
-        <td align="right">1</td>
-        <td>Salt Lake City</td>
-        <td>UT</td>
-        <td>F</td>
-        <td>W</td>
+          <td>05/25/2003</td>
+          <td>Bishop</td>
+          <td>Acacia</td>
+          <td align="right">1</td>
+          <td>Salt Lake City</td>
+          <td>UT</td>
+          <td>F</td>
+          <td>W</td>
         </tr>
         <tr>
-        <td>08/03/2020</td>
-        <td>Salazar</td>
-        <td>Maria</td>
-        <td align="right">14</td>
-        <td>Snowville</td>
-        <td>UT</td>
-        <td>F</td>
-        <td>H</td>
+          <td>08/03/2020</td>
+          <td>Salazar</td>
+          <td>Maria</td>
+          <td align="right">14</td>
+          <td>Snowville</td>
+          <td>UT</td>
+          <td>F</td>
+          <td>H</td>
         </tr>
         <tr>
-        <td>04/09/2020</td>
-        <td>Hernandez-Soto</td>
-        <td>Peggy</td>
-        <td align="right">6</td>
-        <td>Ogden</td>
-        <td>UT</td>
-        <td>F</td>
-        <td>H</td>
+          <td>04/09/2020</td>
+          <td>Hernandez-Soto</td>
+          <td>Peggy</td>
+          <td align="right">6</td>
+          <td>Ogden</td>
+          <td>UT</td>
+          <td>F</td>
+          <td>H</td>
         </tr>
         <tr>
-        <td>06/24/2021</td>
-        <td>Jimenez</td>
-        <td>Lucero</td>
-        <td align="right">14</td>
-        <td>West Valley City</td>
-        <td>UT</td>
-        <td>F</td>
-        <td>H</td>
+          <td>06/24/2021</td>
+          <td>Jimenez</td>
+          <td>Lucero</td>
+          <td align="right">14</td>
+          <td>West Valley City</td>
+          <td>UT</td>
+          <td>F</td>
+          <td>H</td>
         </tr>
         <tr>
-        <td>11/08/2013</td>
-        <td>Colindres-Avila</td>
-        <td>Yuris</td>
-        <td align="right">17</td>
-        <td>West Valley City</td>
-        <td>UT</td>
-        <td>F</td>
-        <td>M</td>
+          <td>11/08/2013</td>
+          <td>Colindres-Avila</td>
+          <td>Yuris</td>
+          <td align="right">17</td>
+          <td>West Valley City</td>
+          <td>UT</td>
+          <td>F</td>
+          <td>M</td>
         </tr>
         <tr>
-        <td>07/15/2021</td>
-        <td>Harris</td>
-        <td>Kandis</td>
-        <td align="right">16</td>
-        <td>Salt Lake City</td>
-        <td>UT</td>
-        <td>F</td>
-        <td>W</td>
+          <td>07/15/2021</td>
+          <td>Harris</td>
+          <td>Kandis</td>
+          <td align="right">16</td>
+          <td>Salt Lake City</td>
+          <td>UT</td>
+          <td>F</td>
+          <td>W</td>
         </tr>
         <tr>
-        <td>07/30/2006</td>
-        <td>Seal</td>
-        <td>Jaydan</td>
-        <td align="right">1</td>
-        <td>Garleys Wash</td>
-        <td>UT</td>
-        <td>M</td>
-        <td>W</td>
+          <td>07/30/2006</td>
+          <td>Seal</td>
+          <td>Jaydan</td>
+          <td align="right">1</td>
+          <td>Garleys Wash</td>
+          <td>UT</td>
+          <td>M</td>
+          <td>W</td>
         </tr>
         <tr>
-        <td>06/13/2018</td>
-        <td>Lizarraga</td>
-        <td>Jose</td>
-        <td align="right">13</td>
-        <td>West Valley City</td>
-        <td>UT</td>
-        <td>M</td>
-        <td>H</td>
+          <td>06/13/2018</td>
+          <td>Lizarraga</td>
+          <td>Jose</td>
+          <td align="right">13</td>
+          <td>West Valley City</td>
+          <td>UT</td>
+          <td>M</td>
+          <td>H</td>
         </tr>
         <tr>
-        <td>04/23/2020</td>
-        <td>Cortez Trujillo</td>
-        <td>Eztli</td>
-        <td align="right">21</td>
-        <td>North Ogden</td>
-        <td>UT</td>
-        <td>M</td>
-        <td>H</td>
+          <td>04/23/2020</td>
+          <td>Cortez Trujillo</td>
+          <td>Eztli</td>
+          <td align="right">21</td>
+          <td>North Ogden</td>
+          <td>UT</td>
+          <td>M</td>
+          <td>H</td>
         </tr>
         <tr>
-        <td>10/25/2017</td>
-        <td>Fowles</td>
-        <td>Juan</td>
-        <td align="right">15</td>
-        <td>Lehi</td>
-        <td>UT</td>
-        <td>M</td>
-        <td>M</td>
+          <td>10/25/2017</td>
+          <td>Fowles</td>
+          <td>Juan</td>
+          <td align="right">15</td>
+          <td>Lehi</td>
+          <td>UT</td>
+          <td>M</td>
+          <td>M</td>
         </tr>
         <tr>
-        <td>08/20/2012</td>
-        <td>Garcia</td>
-        <td>Isai</td>
-        <td align="right">17</td>
-        <td>West Valley City</td>
-        <td>UT</td>
-        <td>M</td>
-        <td>M</td>
+          <td>08/20/2012</td>
+          <td>Garcia</td>
+          <td>Isai</td>
+          <td align="right">17</td>
+          <td>West Valley City</td>
+          <td>UT</td>
+          <td>M</td>
+          <td>M</td>
         </tr>
         <tr>
-        <td>09/01/2015</td>
-        <td>Smith</td>
-        <td>Macin</td>
-        <td align="right">17</td>
-        <td>St. George</td>
-        <td>UT</td>
-        <td>M</td>
-        <td>W</td>
+          <td>09/01/2015</td>
+          <td>Smith</td>
+          <td>Macin</td>
+          <td align="right">17</td>
+          <td>St. George</td>
+          <td>UT</td>
+          <td>M</td>
+          <td>W</td>
         </tr>
         <tr>
-        <td>01/26/2006</td>
-        <td>Sisco-Ramirez</td>
-        <td>Jose</td>
-        <td align="right">4</td>
-        <td>West Valley City</td>
-        <td>UT</td>
-        <td>M</td>
-        <td>M</td>
+          <td>01/26/2006</td>
+          <td>Sisco-Ramirez</td>
+          <td>Jose</td>
+          <td align="right">4</td>
+          <td>West Valley City</td>
+          <td>UT</td>
+          <td>M</td>
+          <td>M</td>
         </tr>
-        </tbody></table>
-</body>
+      </tbody>
+    </table>
+  </body>
+
+  <form class="d-flex">
+    <button class="btn btn-outline-dark" type="submit">
+      <a
+        class="nav-link active"
+        aria-current="page"
+        href="http://127.0.0.1:8000/"
+        >Return To Homepage</a
+      >
+      <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+    </button>
+  </form>
 </html>
