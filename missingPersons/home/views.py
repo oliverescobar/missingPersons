@@ -11,3 +11,7 @@ def HomePageView(request):
 
 def searchPageView(request):
     return render(request, 'homepages/search.html')
+
+
+def addpersonPageView(request):
+    return render(request, 'homepages/addperson.html')
