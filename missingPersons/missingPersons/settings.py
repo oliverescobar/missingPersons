@@ -79,11 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'missing_persons',
         'USER': 'postgres',
-        << << << < HEAD
-        'PASSWORD': 'iloveefy21',
-        == == == =
-        'PASSWORD': 'iloveefy21',
-        >>>>>> > 7512e678bc1c990deac1df8c4f4866069f012f5a
+        'PASSWORD': 'Asdfghjkl910',
         'HOST': 'localhost',
         'PORT': 5432,
     }
