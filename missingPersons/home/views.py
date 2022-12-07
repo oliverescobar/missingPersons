@@ -6,3 +6,6 @@ def indexPageView(request):
 
 def HomePageView(request):
     return render(request, 'homepages/homepage.html')
+
+def searchPageView(request):
+    return render(request, 'homepages/search.html')
