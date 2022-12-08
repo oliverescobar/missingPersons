@@ -1,0 +1,47 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block content %}
+<div class="container">
+    <div class="text-left">
+        <h2 class="section-heading text-uppercase">ADD PERSON</h2>
+    </div>
+    <br>
+    <form name="form" method="post" action= "{% url 'addperson' %}">
+        {% csrf_token %}
+
+        <label for= 'first_name'>First name:</label>
+        <input type="text" name= 'first_name' id='first_name' autofocus>
+        <br><br>
+
+        <label for= 'last_name'> Last name: </label>
+        <input type="text" name= 'last_name' id='last_name' autofocus>
+        <br><br>
+
+        <label for= 'date_missing'> Date missing: </label>
+        <input type="text" name= 'date_missing' id='date_missing' autofocus>
+        <br><br>
+
+        <label for= 'age_missing'> Age at missing: </label>
+        <input type="text" name= 'age_missing' id='age_missing' autofocus>
+        <br><br>
+
+        <label for= 'city'> City: </label>
+        <input type="text" name= 'city' id='city' autofocus>
+        <br><br>
+
+        <label for= 'state'> State: </label>
+        <input type="text" name= 'state' id='state' autofocus>
+        <br><br>
+
+        <label for= 'gender'> Gender </label>
+        <input type="text" name= 'date_missing' id='gender' autofocus>
+        <br><br>
+
+        <label for= 'race'> Race: </label>
+        <input type="text" name= 'race' id='race' autofocus>
+        <br><br>
+
+        <button type="submit">Add</button>
+    </form>
+
+{% endblock %}
