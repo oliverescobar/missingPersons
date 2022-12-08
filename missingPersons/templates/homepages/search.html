@@ -1,31 +1,27 @@
-{% extends 'base.html' %} {% block content %} 
+{% extends 'base.html' %} {% block content %}
 <h1>Search for a person!</h1>
 <form method="get">
-    <label for=" ">Title</label>
-    <input type="text" id="person_id" name="missing_person">
-    <button type="submit" class="btn btn-secondary">Search</button>
+  <label for=" ">Name</label>
+  <input type="text" id="person_id" name="missing_person" />
+  <button type="submit" class="btn btn-secondary">Search</button>
 </form>
 
 {% if books|length == 0 %}
-    <p>Your search returned no results.</p>
-{% else %}
-    {% for missing_person in missing_person%}
-    <div class="col">
-        <div class="card mb-4" style="width: 18rem">
-            <div class="card-body">
-            <h5 class="card-title">{{ missing_person.fullname }}</h5>
-            <p class="card-text">By: {{ missing_person.datelost }}</p>
-            <p>{{missing_person.description}}</p>
-            <a
-                href="{% url 'book_detail' book_id=book.id %}"
-                class="btn btn-primary"
-                >Learn More</a
-            >
-            </div>
-        </div>
-        </div>
-        {% endfor %}
-    {% endif %}
+<p>Your search returned no results.</p>
+{% else %} {% for missing_person in missing_person%}
+<div class="col">
+  <div class="card mb-4" style="width: 18rem">
+    <div class="card-body">
+      <h5 class="card-title">{{ missing_person.fullname }}</h5>
+      <p class="card-text">By: {{ missing_person.datelost }}</p>
+      <p>{{missing_person.description}}</p>
+      <a href="{% url 'book_detail' book_id=book.id %}" class="btn btn-primary"
+        >Learn More</a
+      >
+    </div>
+  </div>
+</div>
+{% endfor %} {% endif %}
 
 <h1>Title</h1>
 <p>Lorem ipsum</p>
