@@ -11,6 +11,20 @@ class missingPerson(models.Model):
     state = models.CharField(max_length=2)
     gender = models.CharField(max_length=1)
     race = models.CharField(max_length=1)
+    
+    def __str__(self):
+        return (self.full_name)
+
+    # return the full name of the people
+    @property  # attribute contained within the object for e/ class to grab 1st and last name
+    def full_name(self):
+        return '%s %s' % (self.first_name, self.last_name)
+    
+    def save(self):
+        self.first_name = self.first_name.upper()
+        self.last_name = self.last_name.upper()
+        super(missingPerson, self).save()
 
     class Meta:
         db_table = 'people'
+
