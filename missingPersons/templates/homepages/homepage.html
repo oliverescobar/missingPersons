@@ -31,11 +31,11 @@
       
 
 
-
-        <a class="btn btn-primary" style= "color: white" aria-current="page" href= "{% url 'addperson' %}" 
+        <a class="btn btn-secondary" href="{% url 'home' %}">Home</a>
+        <a class="btn btn-secondary" style= "color: white" aria-current="page" href= "{% url 'addperson' %}" 
         <span class="badge bg-dark text-white ms-1 rounded-pill"></span> ADD MISSING PERSON</a>
   
-        <a class="btn btn-primary" href= "{% url 'search' %}"> SEARCH PERSON</a>
+        <a class="btn btn-secondary" href= "{% url 'search' %}"> SEARCH PERSON</a>
         {% comment %} <button
           class="navbar-toggler"
           type="button"
