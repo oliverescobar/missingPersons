@@ -1,13 +1,12 @@
-<<<<<<< HEAD
+
 {% extends 'base.html' %} {% block content %} 
 <a class="btn btn-secondary" href="{% url 'home' %}">Home</a>
 <a class="btn btn-secondary" style= "color: white" aria-current="page" href= "{% url 'addperson' %}" 
 <span class="badge bg-dark text-white ms-1 rounded-pill"></span> ADD MISSING PERSON</a>
 
 <a class="btn btn-secondary" href= "{% url 'search' %}"> SEARCH PERSON</a>
-=======
 {% extends 'base.html' %} {% block content %}
->>>>>>> c9fbb6e3476e087c9d252d9a6d01916093d2b8e6
+
 <h1>Search for a person!</h1>
 <form method="get">
   <label for=" ">Name</label>
