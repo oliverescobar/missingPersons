@@ -1,59 +1,46 @@
 {% extends 'base.html' %} {% block content %}
 
-<<<<<<< Updated upstream
-<h1>Search for a person!</h1>
-<form method="get">
+<form name="form" method="get" action="{% url 'search' %}">
+  <h1>Search for a person!</h1>
+
   <label for="person_id">Name</label>
   <input type="text" id="person_id" name="missing_person" />
   <button type="submit" class="btn btn-secondary">Search</button>
-</form>
-=======
-<form name="form" method="post" action="{% url 'search' %}">
-  {% csrf_token %}
-  <h1>Search for a person!</h1>
-  <form method="get">
-    <label for=" ">Name</label>
-    <input type="text" id="person_id" name="missing_person" />
-    <button type="submit" class="btn btn-secondary">Search</button>
-  </form>
->>>>>>> Stashed changes
 
-{% if missing_persons|length == 0 %}
-<p>Your search returned no results.</p>
+  {% if missing_persons|length == 0 %}
+  <p>Your search returned no results.</p>
 
-<<<<<<< HEAD
-{% else %} {% for missing_person in missing_persons %}
-=======
-<<<<<<< Updated upstream
-{% else %} {% for missing_person in missing_person%}
->>>>>>> 47309e81d07110e7bd0fe74951df3ce2a6222b77
-<div class="col">
-  <div class="card mb-4" style="width: 18rem">
-    <div class="card-body">
-      <h5 class="card-title">{{ missing_person.first_name }}</h5>
-      <p class="card-text">By: {{ missing_person.date_missing }}</p>
-      <p>{{missing_person.description}}</p>
-      {% comment %}
-      <a href="{% url 'book_detail' book_id=book.id %}" class="btn btn-primary"
-        >Learn More</a
-      >
-      {% endcomment %}
-=======
-  {% else %} {% for missing_person in missing_person%}
+  {% else %} {% for missing_person in missing_persons %}
+
   <div class="col">
     <div class="card mb-4" style="width: 18rem">
       <div class="card-body">
-        <h5 class="card-title">{{ missing_person.fullname }}</h5>
-        <p class="card-text">By: {{ missing_person.datelost }}</p>
+        <h5 class="card-title">{{ missing_person.first_name }}</h5>
+        <p class="card-text">By: {{ missing_person.date_missing }}</p>
         <p>{{missing_person.description}}</p>
+        {% comment %}
         <a
-          href="{% url 'search' person_id=person.id %}"
+          href="{% url 'book_detail' book_id=book.id %}"
           class="btn btn-primary"
           >Learn More</a
         >
+        {% endcomment %}
+        <div class="col">
+          <div class="card mb-4" style="width: 18rem">
+            <div class="card-body">
+              <h5 class="card-title">{{ missing_person.fullname }}</h5>
+              <p class="card-text">By: {{ missing_person.datelost }}</p>
+              <p>{{missing_person.description}}</p>
+              <a
+                href="{% url 'search' person_id=person.id %}"
+                class="btn btn-primary"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
->>>>>>> Stashed changes
+      {% endfor %} {% endif %} {% endblock %}
     </div>
   </div>
-</div>
-{% endfor %} {% endif %} {% endblock %}
+</form>
