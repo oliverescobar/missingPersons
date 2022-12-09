@@ -11,8 +11,21 @@ def HomePageView(request):
 
 
 def searchPageView(request):
+<<<<<<< Updated upstream
     sFirst = request.GET['first_name']
     return render(request, 'homepages/search.html', sFirst)
+=======
+    try:
+        missing_person = request.GET['missing_person']
+        person = missingPerson.objects.filter(missing_person=missing_person)
+    except:
+        person = missingPerson.objects.all()
+
+    context = {
+    }
+
+    return render(request, 'homepages/search.html', context)
+>>>>>>> Stashed changes
 
 
 def addpersonPageView(request):
