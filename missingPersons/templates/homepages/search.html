@@ -9,8 +9,9 @@
     <button type="submit" class="btn btn-secondary">Search</button>
   </form>
 
-  {% if books|length == 0 %}
+  {% if missing_person|length == 0 %}
   <p>Your search returned no results.</p>
+
   {% else %} {% for missing_person in missing_person%}
   <div class="col">
     <div class="card mb-4" style="width: 18rem">
