@@ -1,46 +1,22 @@
 {% extends 'base.html' %} {% block content %}
 
-<form name="form" method="get" action="{% url 'search' %}">
-  <h1>Search for a person!</h1>
-
-  <label for="person_id">Name</label>
-  <input type="text" id="person_id" name="missing_person" />
+<h1>Search for a person!</h1>
+<form method="get">
+  <label for="first_name">Name</label>
+  <input type="text" id="first_name" name="first_name" />
   <button type="submit" class="btn btn-secondary">Search</button>
+</form>
 
-  {% if missing_persons|length == 0 %}
-  <p>Your search returned no results.</p>
-
-  {% else %} {% for missing_person in missing_persons %}
-
-  <div class="col">
-    <div class="card mb-4" style="width: 18rem">
-      <div class="card-body">
-        <h5 class="card-title">{{ missing_person.first_name }}</h5>
-        <p class="card-text">By: {{ missing_person.date_missing }}</p>
-        <p>{{missing_person.description}}</p>
-        {% comment %}
-        <a
-          href="{% url 'book_detail' book_id=book.id %}"
-          class="btn btn-primary"
-          >Learn More</a
-        >
-        {% endcomment %}
-        <div class="col">
-          <div class="card mb-4" style="width: 18rem">
-            <div class="card-body">
-              <h5 class="card-title">{{ missing_person.fullname }}</h5>
-              <p class="card-text">By: {{ missing_person.datelost }}</p>
-              <p>{{missing_person.description}}</p>
-              <a
-                href="{% url 'search' person_id=person.id %}"
-                class="btn btn-primary"
-                >Learn More</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endfor %} {% endif %} {% endblock %}
+{% if missingPerson|length == 0 %}
+<p>Your search returned no results.</p>
+{% else %} {% for person in missingPerson %}
+<div class="col">
+  <div class="card mb-4" style="width: 18rem">
+    <div class="card-body">
+      <h5 class="card-title">{{ person.first_name }} {{ person.last_name }}</h5>
+      <p class="card-text">Date Missing: {{ person.date_missing }}</p>
+      <p class="card-text">Age at Missing: {{person.age_at_missing}}</p>
     </div>
   </div>
-</form>
+</div>
+{% endfor%} {% endif %} {% endblock %}

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from home.models import missingPerson
+from .models import missingPerson
 
 
 def indexPageView(request):
@@ -7,22 +7,28 @@ def indexPageView(request):
 
 
 def HomePageView(request):
-    return render(request, 'homepages/homepage.html')
+    db_missing = missingPerson.objects.all()
+
+    context = {
+        "missingPerson":  db_missing
+    }
+
+    return render(request, 'homepages/homepage.html', context)
 
 
 def searchPageView(request):
-
+    # NO FREAKING CLUE WHAT THE HECK HAPPENED. WE TRIED SO BEAUTIFULLY HARD FOR HOURS BUT SADLY COULD NOT LINK THE FUN LITTLE WEBSITE TO SHOW THE SEARCH RESULTS. IT PROBABLY WORKS THOUGH...
     try:
-        missing_person = request.GET['missingPerson']
-        person = missingPerson.objects.filter(first_name=first_name)
+        first_name = request.GET['first_name']
+        db_missing = missingPerson.objects.filter(first_name=first_name)
     except:
-        person = missingPerson.objects.all()
+        db_missing = missingPerson.objects.all()
 
-    # context = {
-    #     'first_name': first_name,
-    # }
+    context = {
+        'missingPerson': db_missing
+    }
 
-    return render(request, 'homepages/search.html')
+    return render(request, 'homepages/search.html', context)
     # sFirst = request.GET['first_name']
     # return render(request, 'homepages/search.html', context)
 

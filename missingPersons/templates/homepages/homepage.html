@@ -1,6 +1,7 @@
 <!-- Missing Persons Assignment -->
 <!-- Oliver Escobar, Tayler Howard, Ashley Ondua, Karl Nordgren, Zack Olsen, Thayne Evans --><!DOCTYPE html>
 {% load static %}
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -115,400 +116,39 @@
       <div class="container px-4 px-lg-5 mt-5">
         <div
           class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center"
-        >
+        >{% for person in missingPerson %}
           <div class="col mb-5">
             <div class="card h-100">
               <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="https://www.unicef.org/mena/sites/unicef.org.mena/files/UNICEF_2020_30-November_Irbeen-rural-Damascus_Cash-for-Disabilities_Yara-Koukash_DSC_3786.gif"
-                alt="Missing person Halima Sharmarice"
-              />
+              
               <!-- Product details-->
               <div class="card-body p-4">
                 <div class="text-center">
                   <!-- Person name-->
-                  <h5 class="fw-bolder">Halima Sharmarice</h5>
+                  <h5 class="fw-bolder">{{ person.first_name }} {{ person.last_name }}</h5>
                  <!-- Date Missing -->
-                 Date Missing: 10/30/2009
+                 Date Missing: {{ person.date_missing}}
                 <div class="d-flex justify-content-center small text-warning mb-2"
                >
               </div>
                <!-- Product price-->
-               Age Missing: 14
+               Age Missing: {{ person.age_at_missing }} 
+               <br><br>
+               City: {{ person.city }}
+              <br><br>
+              State: {{ person.state }}
+              <br><br>
+              Gender: {{ person.gender }}
+              <br><br>
+              Race: {{ person.race }}
              </div>
+             
             </div>
               <!-- Product actions-->
-              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center">
-                  <a class="btn btn-outline-dark mt-auto" href="http://www.missingin.org/reg4804/halima_sharmarice.htm"
-                    >More Information</a
-                  >
-                </div>
-              </div>
+              
             </div>
           </div>
-          <div class="col mb-5">
-            <div class="card h-100">
-              <!-- Found badge-->
-              <div
-                class="badge bg-dark text-white position-absolute"
-                style="top: 0.5rem; right: 0.5rem"
-              >
-                Found
-              </div>
-              <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="https://i.pinimg.com/564x/86/e6/cf/86e6cff9dc48bf1262c409811b496dac.jpg"
-                alt="Missing Person Kimberly Martinez"
-              />
-              <!-- Product details-->
-              <div class="card-body p-4">
-                <div class="text-center">
-                  <!-- Product name-->
-                  <h5 class="fw-bolder">Kimberly Martinez</h5>
-                   <!-- Date Missing -->
-                   Date Missing: 10/16/015
-                    <div class="d-flex justify-content-center small text-warning mb-2"
-                  >
-                  </div>
-                  <!-- Product price-->
-                  Age Missing: 14
-                </div>
-              </div>
-              <!-- Product actions-->
-              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center">
-                  <a class="btn btn-outline-dark mt-auto" href="https://bci.utah.gov/coldcases/kimberly-nicole-martinez/"
-                    >More Information</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-5">
-            <div class="card h-100">
-              <!-- Found badge-->
-              <div
-                class="badge bg-dark text-white position-absolute"
-                style="top: 0.5rem; right: 0.5rem"
-              >
-                Found
-              </div>
-              <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="https://www.journal-topics.com/wp-content/uploads/images/2013-01-30/2f45d12bd0e795f039abc546443ea93b.jpg"
-                alt="Missing Person Brenda Gomez"
-              />
-              <!-- Product details-->
-              <div class="card-body p-4">
-                <div class="text-center">
-                  <!-- Product name-->
-                  <h5 class="fw-bolder"></h5>
-                  <h5 class="fw-bolder">Brenda Gomez</h5>
-                   <!-- Date Missing -->
-                   Date Missing: 07/23/2004
-                   <div class="d-flex justify-content-center small text-warning mb-2"
-                   >
-                   </div>
-                  <!-- Product price-->
-                  Age Missing: 16
-                  <span class="text-muted text-decoration-line-through"></span>
-                </div>
-              </div>
-              <!-- Product actions-->
-              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center">
-                  <a class="btn btn-outline-dark mt-auto" href="http://www.forthelost.org/blog/2018/07/23/brenda-gomez-missing-fourteen-years/"
-                    >More Information</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-5">
-            <div class="card h-100">
-              <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="https://images.squarespace-cdn.com/content/v1/56b2634f4d088e7728481e35/1587928318045-QBM3KSWLIZK34XBQAV2J/Acacia_Vanished.jpeg"
-                alt="Missing Person Acacia Bishop"
-              />
-              <!-- Product details-->
-              <div class="card-body p-4">
-                <div class="text-center">
-                  <!-- Product name-->
-                  <h5 class="fw-bolder">Acacia Bishop</h5>
-                   <!-- Date Missing -->
-                   Date Missing: 05/25/2003
-                  <!-- Product reviews-->
-                  <div
-                    class="d-flex justify-content-center small text-warning mb-2"
-                  >
-                  </div>
-                  <!-- Product price-->
-                  Age Missing: 1
-                </div>
-              </div>
-              <!-- Product actions-->
-              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center">
-                  <a class="btn btn-outline-dark mt-auto" href="https://bci.utah.gov/coldcases/acacia-bishop/"
-                    >More Information</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-5">
-            <div class="card h-100">
-              <!-- Found badge-->
-              <div
-                class="badge bg-dark text-white position-absolute"
-                style="top: 0.5rem; right: 0.5rem"
-              >
-                Found
-              </div>
-              <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="https://bci.utah.gov/wp-content/uploads/sites/15/2018/03/m.jpeg"
-                alt="Missing person Maria Salazar"
-              />
-              <!-- Product details-->
-              <div class="card-body p-4">
-                <div class="text-center">
-                  <!-- Product name-->
-                  <h5 class="fw-bolder">Maria Salazar</h5>
-                   <!-- Date Missing -->
-                   Date Missing: 08/03/2020<br>
-                  <!-- Product price-->
-                  Age Missing: 14
-                </div>
-              </div>
-              <!-- Product actions-->
-              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center">
-                  <a class="btn btn-outline-dark mt-auto" href="https://bci.utah.gov/2018/03/21/maria-salazar/"
-                    >More Information</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-5">
-            <div class="card h-100">
-              <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="https://pbs.twimg.com/media/CslCdefVIAAF4cx.jpg"
-                alt="Missing person Peggy Hernandez-Soto"
-              />
-              <!-- Product details-->
-              <div class="card-body p-4">
-                <div class="text-center">
-                  <!-- Product name-->
-                  <h5 class="fw-bolder">Peggy Hernandez-Soto</h5>
-                   <!-- Date Missing -->
-                   Date Missing: 04/09/2020 <br></br>
-                  <!-- Product price-->
-                  Age Missing: 6
-                </div>
-              </div>
-              <!-- Product actions-->
-              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center">
-                  <a class="btn btn-outline-dark mt-auto" href="https://bci.utah.gov/coldcases/peggy-hernandez-soto-2/"
-                    >More Information</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-5">
-            <div class="card h-100">
-              <!-- Found badge-->
-              <div
-                class="badge bg-dark text-white position-absolute"
-                style="top: 0.5rem; right: 0.5rem"
-              >
-                Found
-              </div>
-              <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="https://www.namus.gov/api/CaseSets/NamUs/MissingPersons/Cases/11544/Images/67658/Original"
-                alt="Missing person Lucero Jimenez"
-              />
-              <!-- Product details-->
-              <div class="card-body p-4">
-                <div class="text-center">
-                  <!-- Product name-->
-                  <h5 class="fw-bolder">Lucero Jimenez</h5>
-                   <!-- Date Missing -->
-                   Date Missing: 06/24/2021
-                  <!-- Product reviews-->
-                  <div
-                    class="d-flex justify-content-center small text-warning mb-2"
-                  >
-                  </div>
-                  <!-- Product price-->
-                  Age Missing: 14
-                </div>
-              </div>
-              <!-- Product actions-->
-              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center">
-                  <a class="btn btn-outline-dark mt-auto" href="https://uncovered.com/cases/lucero-jimenez"
-                    >More Information</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col mb-5">
-            <div class="card h-100">
-              <!-- Product image-->
-              <img
-                class="card-img-top"
-                src="http://cdn.primedia.co.za/primedia-broadcasting/image/upload/c_fill,h_437,w_700/e37lp2znijbbhahkxm6w"
-                alt="Missing Person Yuris Colindres Avila"
-              />
-              <!-- Product details-->
-              <div class="card-body p-4">
-                <div class="text-center">
-                  <!-- Product name-->
-                  <h5 class="fw-bolder">Yuris Colindres-Avila</h5>
-                   <!-- Date Missing -->
-                   Date Missing: 11/08/2013
-                  <!-- Product reviews-->
-                  <div
-                    class="d-flex justify-content-center small text-warning mb-2"
-                  >
-                  </div>
-                  <!-- Product price-->
-                  Age Missing: 17
-                </div>
-              </div>
-              <!-- Product actions-->
-              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center">
-                  <a class="btn btn-outline-dark mt-auto" href="https://uncovered.com/cases/yuris-colindres-avila"
-                    >More Information</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-<div class="col mb-5">
-<div class="card h-100">
-  <div
-    class="badge bg-dark text-white position-absolute"
-    style="top: 0.5rem; right: 0.5rem"
-  >
-    Found
-  </div>
-  <!-- Product image-->
-  <img
-    class="card-img-top"
-    src="https://www.abc4.com/wp-content/uploads/sites/4/2021/11/kandis-harris-web.jpg"
-    alt="Missing person Kandis Harris"
-  />
-  <!-- Product details-->
-  <div class="card-body p-4">
-    <div class="text-center">
-      <!-- Product name-->
-      <h5 class="fw-bolder">Kandis Harris</h5>
-       <!-- Date Missing -->
-       Date Missing: 07/15/2021
-      <!-- Product reviews-->
-      <div
-        class="d-flex justify-content-center small text-warning mb-2"
-      >
-      </div>
-      <!-- Product price-->
-      Age Missing: 16
-    </div>
-  </div>
-  <!-- Product actions-->
-  <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-    <div class="text-center">
-      <a class="btn btn-outline-dark mt-auto" href="https://www.abc4.com/news/missing-in-utah/missing-in-utah-a-year-later-still-no-sign-of-kandis-harris/"
-        >More Information</a
-        >
-      </div>
-    </div>
-  </div>
-</div>
-<div class="col mb-5">
-  <div class="card h-100">
-    <!-- Product image-->
-    <img
-      class="card-img-top"
-      src="https://deseret.brightspotcdn.com/dims4/default/30c5afc/2147483647/strip/true/crop/191x127+0+66/resize/740x493!/quality/90/?url=https%3A%2F%2Fcdn.vox-cdn.com%2Fthumbor%2FzIzVVjhKCjbRAjmoCK8AucBqfYI%3D%2F0x0%3A191x260%2F191x260%2Ffilters%3Afocal%2895x130%3A96x131%29%2Fcdn.vox-cdn.com%2Fuploads%2Fchorus_asset%2Ffile%2F16772869%2F645215054.jpg"
-      alt="Missing Person Jayden Seal"
-    />
-    <!-- Product details-->
-    <div class="card-body p-4">
-      <div class="text-center">
-        <!-- Product name-->
-        <h5 class="fw-bolder">Jayden Seal</h5>
-         <!-- Date Missing -->
-         Date Missing: 07/30/2006
-        <!-- Product reviews-->
-        <div
-          class="d-flex justify-content-center small text-warning mb-2"
-        >
-        </div>
-        <!-- Product price-->
-        Age Missing: 1
-      </div>
-    </div>
-    <!-- Product actions-->
-    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-      <div class="text-center">
-        <a class="btn btn-outline-dark mt-auto" href="https://www.deseret.com/2006/9/30/19976962/one-last-try-today-to-find-boy-s-body"
-          >More Information</a
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col mb-5">
-    <div class="card h-100">
-      <!-- Product image-->
-      <img
-        class="card-img-top"
-        src="https://remezcla.com//wp-content/uploads/2017/05/Screen-Shot-2017-05-03-at-10.43.37-AM-1024x511.png"
-        alt="Missing person Jose Lizarraga"
-      />
-      <!-- Product details-->
-      <div class="card-body p-4">
-        <div class="text-center">
-          <!-- Product name-->
-          <h5 class="fw-bolder">Jose Lizarraga</h5>
-           <!-- Date Missing -->
-           Date Missing: 06/13/2018
-          <!-- Product reviews-->
-          <div
-            class="d-flex justify-content-center small text-warning mb-2"
-          >
-          </div>
-          <!-- Product price-->
-          Age Missing: 13
-        </div>
-      </div>
-      <!-- Product actions-->
-      <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-        <div class="text-center">
-          <a class="btn btn-outline-dark mt-auto" href="https://uncovered.com/cases/jose-lizarraga"
-            >More Information</a
-          </div>
-        </div>
-      </div>
-    </section>
+          {% endfor %}
     <!-- Footer-->
   
     <!-- Bootstrap core JS-->
