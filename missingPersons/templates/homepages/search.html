@@ -1,32 +1,28 @@
 {% extends 'base.html' %} {% block content %}
 
-<form name="form" method="post" action="{% url 'addperson' %}">
-  {% csrf_token %}
-  <h1>Search for a person!</h1>
-  <form method="get">
-    <label for=" ">Name</label>
-    <input type="text" id="person_id" name="missing_person" />
-    <button type="submit" class="btn btn-secondary">Search</button>
-  </form>
+<h1>Search for a person!</h1>
+<form method="get">
+  <label for="person_id">Name</label>
+  <input type="text" id="person_id" name="missing_person" />
+  <button type="submit" class="btn btn-secondary">Search</button>
+</form>
 
-  {% if missing_person|length == 0 %}
-  <p>Your search returned no results.</p>
+{% if missing_person|length == 0 %}
+<p>Your search returned no results.</p>
 
-  {% else %} {% for missing_person in missing_person%}
-  <div class="col">
-    <div class="card mb-4" style="width: 18rem">
-      <div class="card-body">
-        <h5 class="card-title">{{ missing_person.fullname }}</h5>
-        <p class="card-text">By: {{ missing_person.datelost }}</p>
-        <p>{{missing_person.description}}</p>
-        <a
-          href="{% url 'book_detail' book_id=book.id %}"
-          class="btn btn-primary"
-          >Learn More</a
-        >
-      </div>
+{% else %} {% for missing_person in missing_person%}
+<div class="col">
+  <div class="card mb-4" style="width: 18rem">
+    <div class="card-body">
+      <h5 class="card-title">{{ missing_person.first_name }}</h5>
+      <p class="card-text">By: {{ missing_person.date_missing }}</p>
+      <p>{{missing_person.description}}</p>
+      {% comment %}
+      <a href="{% url 'book_detail' book_id=book.id %}" class="btn btn-primary"
+        >Learn More</a
+      >
+      {% endcomment %}
     </div>
   </div>
-  {% endfor %} {% endif %}
-</form>
-{% endblock %}
+</div>
+{% endfor %} {% endif %} {% endblock %}

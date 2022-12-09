@@ -11,7 +11,8 @@ def HomePageView(request):
 
 
 def searchPageView(request):
-    return render(request, 'homepages/search.html')
+    sFirst = request.GET['first_name']
+    return render(request, 'homepages/search.html', sFirst)
 
 
 def addpersonPageView(request):
